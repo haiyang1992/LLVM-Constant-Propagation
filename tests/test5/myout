@@ -1,0 +1,36 @@
+CATPass: Start
+  START MODULE: program.bc
+
+  beginning iteration number 1:
+    START Function: foo2
+    START Function: CAT_create_signed_value
+    START Function: CAT_get_signed_value
+    START Function: foo
+    START Function: main
+      CATPass:     found a constant propagation for instruction:   %call1 = call i64 @foo2(i8* %call)
+      CATPass:         replace with constant: 5
+      NOTE: Might not propagate due to multiple definitions!
+    START Function: printf
+
+
+  beginning iteration number 2:
+    START Function: foo2
+      CATPass:     found a constant propagation for instruction:   %call1 = call i64 @CAT_get_signed_value(i8* %d)
+      CATPass:         replace with constant: 5
+    START Function: CAT_create_signed_value
+    START Function: CAT_get_signed_value
+    START Function: foo
+    START Function: main
+    START Function: printf
+
+
+  beginning iteration number 3:
+    START Function: foo2
+    START Function: CAT_create_signed_value
+    START Function: CAT_get_signed_value
+    START Function: foo
+    START Function: main
+    START Function: printf
+
+CATPass: End
+

@@ -1,0 +1,12 @@
+CATPass: Start
+START MODULE: program.bc
+beginning iteration number1:
+CATPass:     found a constant propagation for instruction:   %call1 = call i64 @foo(i8* %call)
+CATPass:         replace with constant: 5
+NOTE: Might not propagate due to multiple definitions!
+beginning iteration number2:
+CATPass:     found a constant propagation for instruction:   %call = call i64 @CAT_get_signed_value(i8* %d)
+CATPass:         replace with constant: 5
+beginning iteration number3:
+CATPass: End
+
